@@ -1,7 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import { reactRouterPlugin } from 'vite-plugin-next-react-router';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-})
+  plugins: [react(), reactRouterPlugin()],
+  server: {
+    port: 3000,
+  },
+  esbuild: {
+    define: {
+      this: 'window',
+    },
+  },
+});
