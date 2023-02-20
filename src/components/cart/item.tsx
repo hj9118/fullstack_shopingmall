@@ -63,7 +63,7 @@ const CartItem = (
       <input
         className='cart-item__checkbox'
         type='checkbox'
-        name={`select-item_${id}`}
+        name={'select-item'}
         ref={ref}
       />
       <img className='cart-item__image' src={imageUrl} />
